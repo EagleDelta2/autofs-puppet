@@ -8,10 +8,10 @@ class autofs::package {
   }
   case $::osfamily {
     'Debian', 'Ubuntu': {
-      package { 'autofs': }
+      package { ['autofs', 'nfs-common']: }
     }
     'RedHat', 'CentOS': {
-      package { 'autofs': }
+      package { ['autofs', 'nfs-utils']: }
     }
     'Solaris': {
       # Solaris includes autofs
