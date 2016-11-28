@@ -76,14 +76,52 @@
 <div class="docstring">
   <div class="discussion">
     
-<p>= Class: autofs::package</p>
+<p>Class: autofs::package</p>
 
 <p>The autofs::package class installs the autofs package.</p>
+
+<p>This class will determine if the OS running is a supported Linux
+distribution and install the appropriate package. It will prevent failures
+on a system that is running Solaris, but will not install anything as it
+should be installed by default.</p>
+
+<p>If the code doesn&#39;t find a matching supported OS, then the Puppet run
+will fail with a “OS not supported” message.</p>
 
   </div>
 </div>
 <div class="tags">
   
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://dhollinger.github.io/autofs-puppet" target="_parent" title="home">home</a></li>
+    
+      <li><span class='object_link'><a href="autofs.html" title="puppet_classes::autofs (puppet_class)">puppet_classes::autofs</a></span></li>
+    
+      <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Project Page">Project Page</a></li>
+    
+      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Forge Page">Forge Page</a></li>
+    
+  </ul>
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>David Hollinger III <a
+href="mailto:david.hollinger@moduletux.com">david.hollinger@moduletux.com</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><div class="method_details_list">
   <table class="source_code">
@@ -92,29 +130,29 @@
         <pre class="lines">
 
 
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
 20
 21
 22
 23
-24</pre>
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/package.pp', line 5</span>
+        <pre class="code"><span class="info file"># File 'manifests/package.pp', line 20</span>
 
 class autofs::package {
   Package {
@@ -143,7 +181,7 @@ class autofs::package {
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 27 23:16:14 2016 by
+  Generated on Sun Nov 27 23:29:56 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>

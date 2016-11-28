@@ -104,35 +104,37 @@ autofs::mounts:
     order: 01</code></pre>
     
   </div>
-<p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>mount</span>
-      
-      
-        <span class='type'></span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Passes hiera values as a hash to the autofs::mount defined type using the
-create_resources function.</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
+      <li><a href="https://dhollinger.github.io/autofs-puppet" target="_parent" title="home">home</a></li>
+    
       <li><span class='object_link'><a href="autofs.html" title="puppet_classes::autofs (puppet_class)">puppet_classes::autofs</a></span></li>
     
+      <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Project Page">Project Page</a></li>
+    
+      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Forge Page">Forge Page</a></li>
+    
   </ul>
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>David Hollinger III <a
+href="mailto:david.hollinger@moduletux.com">david.hollinger@moduletux.com</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><div class="method_details_list">
   <table class="source_code">
@@ -141,14 +143,14 @@ create_resources function.</p>
         <pre class="lines">
 
 
-22
-23
 24
 25
-26</pre>
+26
+27
+28</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/mounts.pp', line 22</span>
+        <pre class="code"><span class="info file"># File 'manifests/mounts.pp', line 24</span>
 
 class autofs::mounts() {
   $mount = hiera_hash(&#39;autofs::mounts&#39;, [])
@@ -162,7 +164,7 @@ class autofs::mounts() {
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 27 23:16:14 2016 by
+  Generated on Sun Nov 27 23:29:56 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>

@@ -99,6 +99,11 @@ the service to run, but not at startup.</p>
         <em class="default">(defaults to: <tt>running</tt>)</em>
       
       
+        &mdash;
+        <div class='inline'>
+<p>Determines state of the service. Can be set to: running or stopped.</p>
+</div>
+      
     </li>
   
     <li>
@@ -111,6 +116,13 @@ the service to run, but not at startup.</p>
       
         <em class="default">(defaults to: <tt>true</tt>)</em>
       
+      
+        &mdash;
+        <div class='inline'>
+<p>Determines if the service should start with the system boot. true will
+start the autofs service on boot. false will not start the autofs service
+on boot.</p>
+</div>
       
     </li>
   
@@ -125,6 +137,13 @@ the service to run, but not at startup.</p>
         <em class="default">(defaults to: <tt>true</tt>)</em>
       
       
+        &mdash;
+        <div class='inline'>
+<p>Determines if the service has a restart command. If true, puppet will use
+the restart command to restart the service. If false, the stop, then start
+commands will be used instead.</p>
+</div>
+      
     </li>
   
     <li>
@@ -138,10 +157,45 @@ the service to run, but not at startup.</p>
         <em class="default">(defaults to: <tt>true</tt>)</em>
       
       
+        &mdash;
+        <div class='inline'>
+<p>Determines if service has a status command.</p>
+</div>
+      
     </li>
   
 </ul>
 
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://dhollinger.github.io/autofs-puppet" target="_parent" title="home">home</a></li>
+    
+      <li><span class='object_link'><a href="autofs.html" title="puppet_classes::autofs (puppet_class)">puppet_classes::autofs</a></span></li>
+    
+      <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Project Page">Project Page</a></li>
+    
+      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Forge Page">Forge Page</a></li>
+    
+  </ul>
+<p class="tag_title">Author:</p>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>David Hollinger III <a
+href="mailto:david.hollinger@moduletux.com">david.hollinger@moduletux.com</a></p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><div class="method_details_list">
   <table class="source_code">
@@ -150,23 +204,23 @@ the service to run, but not at startup.</p>
         <pre class="lines">
 
 
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre>
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/service.pp', line 8</span>
+        <pre class="code"><span class="info file"># File 'manifests/service.pp', line 24</span>
 
 class autofs::service (
   String $ensure           = running,
@@ -189,7 +243,7 @@ class autofs::service (
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 27 23:16:14 2016 by
+  Generated on Sun Nov 27 23:29:56 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>
