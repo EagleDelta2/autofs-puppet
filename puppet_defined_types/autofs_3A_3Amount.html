@@ -158,6 +158,62 @@ server.example.com:/path/to/home/shares&#39;</p>
   
     <li>
       
+        <span class='name'>master</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;/etc/auto.master&#39;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Full path, including filename, to the autofs master file.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>map_dir</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>&#39;/etc/auto.master.d&#39;</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Full path, including directory name, to the autofs master configuration
+directory. Only required if use_dir is set to true.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>use_dir</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>false</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If true, autofs will look for master configuration in the map_dir path
+using filenames ending in the “.autofs” extension.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>options</span>
       
       
@@ -246,45 +302,6 @@ is a standard “auto.” configuration file.</p>
       
     </li>
   
-    <li>
-      
-        <span class='name'>master</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>&#39;/etc/auto.master&#39;</tt>)</em>
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>map_dir</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>&#39;/etc/auto.master.d&#39;</tt>)</em>
-      
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>use_dir</span>
-      
-      
-        <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>false</tt>)</em>
-      
-      
-    </li>
-  
 </ul>
 
 
@@ -297,7 +314,7 @@ is a standard “auto.” configuration file.</p>
     
       <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Project Page">Project Page</a></li>
     
-      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="https://forge.puppet.com/dhollinger/autofs">https://forge.puppet.com/dhollinger/autofs</a></li>
+      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Forge Page">Forge Page</a></li>
     
   </ul>
 
@@ -308,11 +325,6 @@ is a standard “auto.” configuration file.</p>
         <pre class="lines">
 
 
-32
-33
-34
-35
-36
 37
 38
 39
@@ -394,10 +406,15 @@ is a standard “auto.” configuration file.</p>
 115
 116
 117
-118</pre>
+118
+119
+120
+121
+122
+123</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/mount.pp', line 32</span>
+        <pre class="code"><span class="info file"># File 'manifests/mount.pp', line 37</span>
 
 define autofs::mount (
   String $mount,
@@ -493,7 +510,7 @@ define autofs::mount (
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 27 23:00:48 2016 by
+  Generated on Sun Nov 27 23:06:53 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>
