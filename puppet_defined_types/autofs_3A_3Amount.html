@@ -73,10 +73,10 @@
 <h2>Overview</h2>
 <div class="docstring">
   <div class="discussion">
-    
-<p>Define: autofs::mount</p>
+    <p>Define: autofs::mount</p>
 
-<p>Defined type to generate autofs mount point configuration files.</p>
+<p>Defined type to generate autofs mount point
+configuration files.</p>
 
   </div>
 </div>
@@ -86,9 +86,7 @@
     <p class="tag_title">Examples:</p>
     
       
-        <p class="example_title"><div class='inline'>
-<p>Using the autofs::mount defined type to setup automount for user home
-directories.</p>
+        <p class="example_title"><div class='inline'><p>Using the autofs::mount defined type to setup automount for user home directories.</p>
 </div></p>
       
       <pre class="example code"><code>autofs::mount { &#39;home&#39;:
@@ -113,8 +111,7 @@ directories.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Location where you will mount the remote NFS Share.</p>
+        <div class='inline'><p>Location where you will mount the remote NFS Share.</p>
 </div>
       
     </li>
@@ -131,8 +128,7 @@ directories.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Name of the “auto.” configuration file that will be generated.</p>
+        <div class='inline'><p>Name of the &quot;auto.&quot; configuration file that will be generated.</p>
 </div>
       
     </li>
@@ -149,9 +145,8 @@ directories.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>The mount point options and parameters. Example: &#39;* -user,rw,soft
-server.example.com:/path/to/home/shares&#39;</p>
+        <div class='inline'><p>The mount point options and parameters.
+Example: &#39;* -user,rw,soft server.example.com:/path/to/home/shares&#39;</p>
 </div>
       
     </li>
@@ -168,8 +163,7 @@ server.example.com:/path/to/home/shares&#39;</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Full path, including filename, to the autofs master file.</p>
+        <div class='inline'><p>Full path, including filename, to the autofs master file.</p>
 </div>
       
     </li>
@@ -186,9 +180,8 @@ server.example.com:/path/to/home/shares&#39;</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Full path, including directory name, to the autofs master configuration
-directory. Only required if use_dir is set to true.</p>
+        <div class='inline'><p>Full path, including directory name, to the autofs master
+configuration directory. Only required if use_dir is set to true.</p>
 </div>
       
     </li>
@@ -205,9 +198,8 @@ directory. Only required if use_dir is set to true.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>If true, autofs will look for master configuration in the map_dir path
-using filenames ending in the “.autofs” extension.</p>
+        <div class='inline'><p>If true, autofs will look for master configuration in the map_dir
+path using filenames ending in the &quot;.autofs&quot; extension.</p>
 </div>
       
     </li>
@@ -224,8 +216,7 @@ using filenames ending in the “.autofs” extension.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Options for the autofs mount point within in the auto.master.</p>
+        <div class='inline'><p>Options for the autofs mount point within in the auto.master.</p>
 </div>
       
     </li>
@@ -240,8 +231,7 @@ using filenames ending in the “.autofs” extension.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Order in which entries will appear in the autofs master file.</p>
+        <div class='inline'><p>Order in which entries will appear in the autofs master file.</p>
 </div>
       
     </li>
@@ -258,9 +248,8 @@ using filenames ending in the “.autofs” extension.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Boolean to allow for indirect map. Defaults to true to be backwards
-compatible.</p>
+        <div class='inline'><p>Boolean to allow for indirect map. Defaults to true to be
+backwards compatible.</p>
 </div>
       
     </li>
@@ -277,9 +266,8 @@ compatible.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>If true, it will make the $mapfile an executable script, otherwise the file
-is a standard “auto.” configuration file.</p>
+        <div class='inline'><p>If true, it will make the $mapfile an executable script,
+otherwise the file is a standard &quot;auto.&quot; configuration file.</p>
 </div>
       
     </li>
@@ -296,8 +284,7 @@ is a standard “auto.” configuration file.</p>
       
       
         &mdash;
-        <div class='inline'>
-<p>Set to false if you only want to place the file if it is missing.</p>
+        <div class='inline'><p>Set to false if you only want to place the file if it is missing.</p>
 </div>
       
     </li>
@@ -326,9 +313,7 @@ is a standard “auto.” configuration file.</p>
       
       
         
-        <div class='inline'>
-<p>David Hollinger III <a
-href="mailto:david.hollinger@moduletux.com">david.hollinger@moduletux.com</a></p>
+        <div class='inline'><p>David Hollinger III <a href="mailto:david.hollinger@moduletux.com">david.hollinger@moduletux.com</a></p>
 </div>
       
     </li>
@@ -527,7 +512,7 @@ define autofs::mount (
 </div>
 
       <div id="footer">
-  Generated on Sun Nov 27 23:31:29 2016 by
+  Generated on Mon Nov 28 10:47:00 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>
