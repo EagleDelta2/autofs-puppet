@@ -111,7 +111,7 @@ file names.</p>
       
       
         &mdash;
-        <div class='inline'><p>hash parameter containing autofs config data</p>
+        <div class='inline'><p>the options to build the autofs config from</p>
 </div>
       
     </li>
@@ -152,6 +152,156 @@ file names.</p>
   
 </ul>
 
+  
+    
+    
+    <p class="tag_title">Options Hash (<tt>mounts</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:mount</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Location autofs will mount the share</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:order</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Order in which the config will be placed
+in auto.master</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:options</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Mount options</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:master</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Full path to the autofs master file,
+including filename</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:map_dir</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Full path to the master configuration
+directory. Only used with :use_dir</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:use_dir</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Use the +dir option or not.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:direct</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Use direct mounts or not.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:execute</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Make the auto.* file executable or not.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mapfile</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Name of the &quot;auto.*&quot; configuration file to
+be generated.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:mapcontents</span>
+          <span class="type">(<tt>Array</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Mount point options and parameters. Each
+array element represents a line in the configuration file.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:replace</span>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'><p>Enforce the configuration state or not.</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+    
+    
+    
+    
+
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
@@ -186,23 +336,23 @@ file names.</p>
         <pre class="lines">
 
 
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre>
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
       </td>
       <td>
-        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 21</span>
+        <pre class="code"><span class="info file"># File 'manifests/init.pp', line 37</span>
 
 class autofs (
   Hash $mounts         = {},
@@ -225,7 +375,7 @@ class autofs (
 </div>
 
       <div id="footer">
-  Generated on Tue Nov 29 09:08:36 2016 by
+  Generated on Tue Nov 29 15:57:39 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.1).
 </div>
