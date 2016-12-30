@@ -295,13 +295,13 @@ otherwise the file is a standard &quot;auto.&quot; configuration file.</p>
   <p class="tag_title">See Also:</p>
   <ul class="see">
     
-      <li><a href="https://dhollinger.github.io/autofs-puppet" target="_parent" title="home">home</a></li>
+      <li><a href="https://dhollinger.github.io/autofs-puppet" target="_parent" title="Home">Home</a></li>
     
-      <li><a href="https://dhollinger.github.io/autofs-puppet/puppet_classes/autofs.html" target="_parent" title="autofs">autofs</a></li>
+      <li><a href="https://dhollinger.github.io/autofs-puppet/puppet_classes/autofs.html" target="_parent" title="puppet_classes::autofs">puppet_classes::autofs</a></li>
     
-      <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Project Page">Project Page</a></li>
+      <li><a href="https://www.github.com/dhollinger/autofs-puppet" target="_parent" title="Github">Github</a></li>
     
-      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Forge Page">Forge Page</a></li>
+      <li><a href="https://forge.puppet.com/dhollinger/autofs" target="_parent" title="Puppet Forge">Puppet Forge</a></li>
     
   </ul>
 <p class="tag_title">Author:</p>
@@ -413,7 +413,8 @@ otherwise the file is a standard &quot;auto.&quot; configuration file.</p>
 122
 123
 124
-125</pre>
+125
+126</pre>
       </td>
       <td>
         <pre class="code"><span class="info file"># File 'manifests/mount.pp', line 39</span>
@@ -465,10 +466,11 @@ define autofs::mount (
     }
   } else {
     ensure_resource(&#39;file&#39;, $map_dir, {
-      &#39;ensure&#39; =&gt; &#39;directory&#39;,
-      &#39;owner&#39;  =&gt; &#39;root&#39;,
-      &#39;group&#39;  =&gt; &#39;root&#39;,
-      &#39;mode&#39;   =&gt; &#39;0755&#39;,
+      &#39;ensure&#39;  =&gt; &#39;directory&#39;,
+      &#39;owner&#39;   =&gt; &#39;root&#39;,
+      &#39;group&#39;   =&gt; &#39;root&#39;,
+      &#39;mode&#39;    =&gt; &#39;0755&#39;,
+      &#39;require&#39; =&gt; Package[&#39;autofs&#39;],
     })
 
     if !defined(Concat::Fragment[&#39;autofs::fragment preamble map directory&#39;]) {
@@ -512,9 +514,9 @@ define autofs::mount (
 </div>
 
       <div id="footer">
-  Generated on Tue Nov 29 15:57:39 2016 by
+  Generated on Fri Dec 30 00:12:48 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.1).
+  0.9.5 (ruby-2.2.6).
 </div>
 
     </div>

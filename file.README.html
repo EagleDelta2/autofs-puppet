@@ -237,7 +237,7 @@ autofs::mounts:
 
 <ul>
 <li><strong>mount_name</strong> - This is a logical, descriptive name for what what autofs will be
-mounting. This is represented by the &quot;home:&quot; and &quot;tmp:&quot; entries above.</li>
+mounting. This is represented by the <code>home:</code> and <code>tmp:</code> entries above.</li>
 <li><strong>mount</strong> - This Mapping describes where autofs will be mounting to. This map
 entry is referenced by concat as part of the generation of the /etc/auto.master
 file.</li>
@@ -265,21 +265,71 @@ Defaults to <code>false</code>.</li>
 
 <h2>Limitations</h2>
 
+<h4>Puppet platforms</h4>
+
+<p>Release 2.0.0 (and above) only support Puppet 4.x and Puppet Enterprise 2015.2.0 or newer</p>
+
+<h4>Puppet 3.x Compatibility</h4>
+
+<p>Puppet 3.x was End of Life starting January 1st, 2017, if Puppet 3.x functionality is still needed, please install using one of the following methods:</p>
+
+<ul>
+<li>Manually: <code>puppet module install dhollinger-autofs --version 1.4.5</code></li>
+<li>Puppetfile: <code>mod &#39;dhollinger-autofs&#39;, &#39;1.4.5&#39;</code></li>
+<li>Git: <code>git clone git@github.com:dhollinger/autofs-puppet.git -b 1.4.5 &lt;module_path&gt;/autofs</code></li>
+</ul>
+
+<p>Support for Puppet 3.x Functionality:</p>
+
+<ul>
+<li>No new features will be added to the 1.4.x/Puppet 3.x branches.</li>
+<li>No new deployments will be issued Puppet Forge.</li>
+<li>Will still accept Issues and Pull Requests until June 30, 2017.
+
+<ul>
+<li>Tag issues with <code>legacy</code> tag.</li>
+</ul></li>
+</ul>
+
 <h4>Operating Systems</h4>
 
 <ul>
 <li>Supported
 
 <ul>
-<li>Ubuntu 14.04/16.04</li>
-<li>CentOS/RHEL/Oracle Linux 6.x/7.x</li>
+<li>Ubuntu
+
+<ul>
+<li>14.04</li>
+<li>16.04</li>
+</ul></li>
+<li>CentOS/RHEL/Scientific/Oracle Linux
+
+<ul>
+<li>6.x</li>
+<li>7.x</li>
+</ul></li>
+<li>SLES
+
+<ul>
+<li>11 Service Pack 4</li>
+<li>12 Service Pack 1</li>
+</ul></li>
+<li>OpenSUSE 13.1</li>
+<li>Debian
+
+<ul>
+<li>7 &quot;Wheezy&quot;</li>
+<li>8 &quot;Jessie&quot;</li>
+</ul></li>
 </ul></li>
 <li>Self Support - should work, support not provided by developer
 
 <ul>
 <li>Solaris 10, 11</li>
-<li>Debian 7, 8</li>
-<li>Fedora 23, 24</li>
+<li>Fedora 24, 25</li>
+<li>SLES 10</li>
+<li>CentOS/RHEL/Scientific/Oracle Linux 5.x</li>
 </ul></li>
 <li>Unsupported
 
@@ -299,9 +349,9 @@ Defaults to <code>false</code>.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Tue Nov 29 15:57:39 2016 by
+  Generated on Fri Dec 30 00:12:48 2016 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.5 (ruby-2.3.1).
+  0.9.5 (ruby-2.2.6).
 </div>
 
     </div>
